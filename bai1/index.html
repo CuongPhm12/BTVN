@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 1:-->
+<!--Cho trước 1 mảng n phần tử-->
+<!--Viết hàm đếm in ra số lượng các số chẵn trong mảng-->
+<script>
+    let sample = [];
+    for (let i = 0; i <= 20; i++) {
+        sample.push(i);
+    }
+
+    let newSample=[];
+    function countNumber(){
+    for (let i = 0; i < sample.length; i++) {
+        if(sample[i]%2==0){
+            newSample.push(sample[i])
+        }
+    }
+    document.write("the even number of this array are " + newSample.length);
+    }
+    countNumber();
+
+</script>
+
+</body>
+</html>

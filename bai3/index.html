@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Cho trước 1 mảng bao gồm n phần tử-->
+<!--Viết hàm tính tổng các số nguyên tố trong mảng.-->
+<script>
+    function sumFunction(){
+    let sample = [1,5,2,-3,6,7,-20,13,52,44,94];
+    let sum = 0;
+    for (let i = 0; i < sample.length; i++) {
+        let check =true;
+        if(sample[i]<0){
+            check = false;
+        }
+        if(sample[i]==1){
+                check = false;
+        }
+        for (let j = 2; j <= (sample[i]-1); j++) {
+            if(sample[i]%j === 0){
+                check =false;
+            }
+        }
+        if(check===true){
+            sum+=sample[i]
+        }
+    }
+document.write("Tổng các số nguyên tố trong mảng này là "+sum);
+    }
+    sumFunction()
+
+</script>
+</body>
+</html>
